@@ -19,13 +19,17 @@ public class EmployeeWageComputation {
         System.out.println("employee wage is " + empWages);
     }
     int employeeHour() {
-        double empCheck = Math.floor(Math.random() * 10) % 3;
-        if (empCheck == IS_FULL_TIME)
-            empHour = 8;
-        else if (empCheck == IS_PART_TIME)
-            empHour = 4;
-        else
-            empHour = 0;
+        int empCheck = (int)Math.floor(Math.random() * 10) % 3;
+        switch (empCheck) {
+            case IS_FULL_TIME:
+                empHour = 8;
+                break;
+            case IS_PART_TIME:
+                empHour = 4;
+                break;
+            default:
+                empHour = 0;
+        }
         return empHour;
     }
 }
