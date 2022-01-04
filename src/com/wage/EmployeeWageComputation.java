@@ -17,6 +17,8 @@ public class EmployeeWageComputation {
         int numOfDays = sc.nextInt();
         System.out.println("Enter a max Working hour : ");
         int maxWorkingHour = sc.nextInt();
+        System.out.println("Enter a company name:");
+        String company = sc.next();
         int empHour = 0;
         int totalEmpWages = 0;
         int totalWorkingDays = 0;
@@ -38,6 +40,6 @@ public class EmployeeWageComputation {
             totalEmpHours+= empHour;
         }
         totalEmpWages = totalEmpHours * empRatePerHour;
-        System.out.println("total employee wage is " + totalEmpWages);
+        System.out.println("For company " +company + " total employee wage is " + totalEmpWages);
     }
 }
